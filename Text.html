@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="text.css">
+    <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
+    <title>Text Formatting</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parent {
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 20px;
+}
+
+.content {
+    width: 575px;
+    height: 300px;
+    font-size: 24px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 0.1px solid #000;
+}
+
+.content:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.child > .btn {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s;
+    background: #d2d2d2;
+}
+
+.child > .btn > .fa-solid {
+    font-size: 18px;
+}
+
+.child > .btn:hover {
+    background: #444;
+}
+
+.child > .btn:hover .fa-solid {
+    color: #fff;
+    
+}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="parent">
+            <div class="content input" contenteditable="true"></div>
+        </div>
+        <div class="child">
+            <button class="btn bold"><i class="fa-solid fa-bold"></i></button>
+            <buton class="btn italic"><i class="fa-solid fa-italic"></i></buton>
+            <button class="btn underline"><i class="fa-solid fa-underline"></i></button>
+            <button class="btn left"><i class="fa-solid fa-align-left"></i></button>
+            <button class="btn center"><i class="fa-solid fa-align-center"></i></button>
+            <button class="btn right"><i class="fa-solid fa-align-right"></i></button>
+        </div>
+    </section>
+</body>
+</html>
